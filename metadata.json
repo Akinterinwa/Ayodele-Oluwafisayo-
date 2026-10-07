@@ -1,0 +1,6 @@
+{
+  "name": "AI Portfolio & Case Study Studio",
+  "description": "Executive portfolio & deep case study studio for AI Trainers, Data Evaluators, CX Specialists, and Quality Operations Leads with interactive project analyses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
