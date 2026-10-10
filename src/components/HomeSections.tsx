@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { UserProfileData, ProjectDetailData, SkillCategory } from '../types/portfolio';
 import { ProjectCard } from './ProjectCard';
-import { ArrowDown, Mail, MapPin, GraduationCap, Camera, RotateCcw } from 'lucide-react';
+import { ArrowDown, Download, Mail, MapPin, GraduationCap, Camera, RotateCcw } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { motion } from 'motion/react';
 import { LazyImage } from './LazyImage';
@@ -137,6 +137,17 @@ export const HomeHero: React.FC<HomeHeroProps> = ({ profile, onSeeWork, onContac
                 <Mail className="w-3.5 h-3.5 text-[#0F5132] dark:text-[#34D399]" />
                 <span>Contact me</span>
               </motion.button>
+
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                href="/cv.pdf"
+                download="Oluwafisayo-Ayodele-CV.pdf"
+                className="flex items-center gap-2 px-5 py-2.5 rounded border border-black/15 dark:border-white/15 hover:border-black/30 dark:hover:border-white/30 text-[#1A1A1A] dark:text-white transition-colors"
+              >
+                <Download className="w-3.5 h-3.5 text-[#0F5132] dark:text-[#34D399]" />
+                <span>Download CV</span>
+              </motion.a>
             </motion.div>
           </motion.div>
 
@@ -210,7 +221,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({ profile, onSeeWork, onContac
                 className="mt-2.5 flex items-center justify-between font-mono text-[11px] text-[#6E6D6B] dark:text-[#9A9894] px-1"
               >
                 <span>{profile.fullName}</span>
-                <span className="text-[10px] text-[#0F5132] dark:text-[#34D399] font-medium">Verified Portfolio</span>
+                <span className="text-[10px] text-[#0F5132] dark:text-[#34D399] font-medium">AI Trainer</span>
               </motion.div>
             </div>
           </motion.div>
@@ -291,6 +302,15 @@ interface HomeWorkProps {
 }
 
 export const HomeWork: React.FC<HomeWorkProps> = ({ projects, onSelectProject }) => {
+  const [projectFilter, setProjectFilter] = useState<'all' | 'ai' | 'operations'>('all');
+  const aiProjects = projects.filter((project) => project.chartType === 'ai-eval' || project.chartType === 'rubric');
+  const operationsProjects = projects.filter((project) => project.chartType === 'cx-teardown' || project.chartType === 'process-improvement');
+  const visibleProjects = projectFilter === 'ai'
+    ? aiProjects
+    : projectFilter === 'operations'
+      ? operationsProjects
+      : projects;
+
   return (
     <motion.section
       id="work"
@@ -325,9 +345,38 @@ export const HomeWork: React.FC<HomeWorkProps> = ({ projects, onSelectProject })
           </motion.p>
         </div>
 
-        {/* 2x2 Grid of Large Project Cards */}
+        <div className="mb-6">
+          <div
+            className="inline-flex flex-wrap items-center gap-1 rounded border border-black/10 dark:border-white/10 p-1"
+            role="group"
+            aria-label="Filter projects"
+          >
+            {[
+              { id: 'all', label: 'All', count: projects.length },
+              { id: 'ai', label: 'AI projects', count: aiProjects.length },
+              { id: 'operations', label: 'Operations', count: operationsProjects.length },
+            ].map((filter) => (
+              <button
+                key={filter.id}
+                type="button"
+                aria-pressed={projectFilter === filter.id}
+                onClick={() => setProjectFilter(filter.id as 'all' | 'ai' | 'operations')}
+                className={`flex items-center gap-2 rounded px-3 py-2 font-mono text-xs transition-colors ${
+                  projectFilter === filter.id
+                    ? 'bg-[#0F5132] text-white dark:bg-[#34D399] dark:text-[#121316]'
+                    : 'text-[#5A5A5A] hover:bg-black/5 dark:text-[#B0AEA9] dark:hover:bg-white/5'
+                }`}
+              >
+                <span>{filter.label}</span>
+                <span className="opacity-70">{filter.count}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Project cards filtered by category */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          {projects.map((proj, idx) => (
+          {visibleProjects.map((proj, idx) => (
             <motion.div
               key={proj.id}
               initial={{ opacity: 0, y: 24 }}

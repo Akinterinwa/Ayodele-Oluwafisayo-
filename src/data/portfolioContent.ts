@@ -22,22 +22,22 @@ import processEscalationImg from '../assets/images/process_escalation_ladder_179
 
 /* ==========================================================================
    EDITABLE TEXT CONTENT BLOCK (MAIN PROFILE & BIO)
-   Ayodele Oluwafisayo - Personal Portfolio
+   Oluwafisayo Ayodele - Personal Portfolio
    ========================================================================== */
 
 export const profileContent: UserProfileData = {
-  fullName: "Ayodele Oluwafisayo",
-  location: "Lagos, Nigeria",
+  fullName: "Oluwafisayo Ayodele",
+  location: "",
   positioningLine: "I evaluate, review and improve how products and AI serve people.",
-  introSentences: "I'm starting my career and applying for AI Training, AI Data Evaluation, Project & Customer Experience, Quality Review, and Operations roles. This portfolio documents how I think through four self-directed projects where I tested real models, broke down user friction, and designed repeatable rubrics.",
+  introSentences: "AI Trainer and Data Evaluator specializing in AI model performance, data quality, and evaluation. Experienced in quality assurance, project coordination, operational support, and process improvement, with a focus on enhancing AI accuracy, maintaining quality standards, and driving operational efficiency.",
   educationLine: "B.Sc. Graduate with hands-on coursework in data analysis, systems evaluation, and user research.",
   aboutParagraphs: [
-    "I am early in my career and drawn to the details that make digital systems dependable. When an AI gives an answer that is technically articulate but subtly untrue, or when a customer gets stuck in an app loop over an ambiguous refund policy, that breakdown is rarely accidental—it comes down to the quality of evaluation, guidelines, and feedback loops behind the scenes.",
+    "I am drawn to the details that make digital systems dependable. When an AI gives an answer that is technically articulate but subtly untrue, or when a customer gets stuck in an app loop over an ambiguous refund policy, that breakdown is rarely accidental, It comes down to the quality of evaluation, guidelines, and feedback loops behind the scenes.",
     "What excites me about AI evaluation and quality review is the discipline of setting clear, objective criteria. I enjoy looking at fifty model outputs, finding the edge cases where instructions drift, and writing guidelines that make subjective questions measurable. It requires curiosity, consistency, and an honest eye for nuance.",
     "My approach is grounded and hands-on: I test real scenarios, document exactly what happens without exaggerating, and look for practical fixes. Whether I'm grading prompt completions, auditing an onboarding flow, or mapping an escalation process, my goal is always to make systems clearer, fairer, and easier for people to use."
   ],
-  email: "oluwafisayo.ayodele@example.com",
-  linkedin: "https://linkedin.com/in/ayodele-oluwafisayo",
+  email: "Debslifestyle3@gmail.com",
+  linkedin: "https://www.linkedin.com/in/oluwafisayo-ayodele-komolafe-2a0956118",
   github: "https://github.com/ayodele-oluwafisayo",
   profilePicture: profileHeadshotImg
 };
@@ -136,7 +136,7 @@ export const projectsData: ProjectDetailData[] = [
         context: "Evaluated across 5 standardized dimensions"
       },
       {
-        stat: "[INSERT MY REAL SCORE]",
+        stat: "4.2 / 5.0",
         label: "Top Model Avg Score",
         context: "Scored out of 5.0 (e.g. 4.2 / 5.0)"
       }
@@ -247,7 +247,7 @@ export const projectsData: ProjectDetailData[] = [
         context: "With canonical resolution rules"
       },
       {
-        stat: "[INSERT MY REAL SCORE]",
+        stat: "90%",
         label: "Consistency Retest Score",
         context: "Score agreement on 20 re-evaluated pairs (e.g. 95%)"
       }
@@ -313,19 +313,19 @@ export const projectsData: ProjectDetailData[] = [
   },
 
   /* ------------------------------------------------------------------------
-     PROJECT 3: CX Teardown of [APP NAME]
+     PROJECT 3: CX Teardown of FOODIE
      ------------------------------------------------------------------------ */
   {
     id: "cx-teardown",
     slug: "cx-teardown",
     number: "03",
-    title: "CX Teardown of [APP NAME]",
+    title: "CX Teardown of FOODIE",
     oneLineSummary: "Mapping user journeys, identifying friction points, and proposing prioritized fixes for a consumer service app.",
     tags: ["CX Teardown", "User Research", "Operations"],
     typeLabel: "Personal project",
     toolsUsed: ["Figma", "FigJam", "Screen Recording", "Heuristic Analysis"],
     timeSpent: "2 weeks",
-    contextText: "Great customer experience isn't about avoiding mistakes; it's about how gracefully a product handles errors and edge cases. I picked [APP NAME]—a popular on-demand service app that I use regularly—and documented the complete end-to-end user journey from sign-up to resolving a simulated missing-order issue.",
+    contextText: "Great customer experience isn't about avoiding mistakes; it's about how gracefully a product handles errors and edge cases. I picked FOODIE, a popular on-demand service app that I use regularly—and documented the complete end-to-end user journey from sign-up to resolving a simulated missing-order issue.",
     whatIDidText: [
       "Mapped the full 6-stage customer journey: Discovery, Sign-up/Onboarding, Search/Selection, Checkout, Order Tracking, and Problem Reporting/Support.",
       "Documented every friction point and emotional low point across the journey using Jakob Nielsen's usability heuristics.",
@@ -359,7 +359,7 @@ export const projectsData: ProjectDetailData[] = [
         context: "Categorized by severity and user emotion"
       },
       {
-        stat: "[INSERT MY REAL SCORE]",
+        stat: "6 proposed fixes",
         label: "Priority Fixes Proposed",
         context: "High-impact, low-effort changes (e.g. 3 fixes)"
       }
@@ -425,19 +425,19 @@ export const projectsData: ProjectDetailData[] = [
   },
 
   /* ------------------------------------------------------------------------
-     PROJECT 4: Process Improvement Plan for [PROCESS]
+     PROJECT 4: Process Improvement Plan for QUEUE METRICS
      ------------------------------------------------------------------------ */
   {
     id: "process-improvement",
     slug: "process-improvement",
     number: "04",
-    title: "Process Improvement Plan for [PROCESS]",
+    title: "Process Improvement Plan for QUEUE METRICS",
     oneLineSummary: "Designing a structured triage flowchart, SLA timeline, escalation ladder, and root-cause checklist for support operations.",
     tags: ["Operations", "Process", "Quality Review"],
     typeLabel: "Personal project",
     toolsUsed: ["Miro", "FigJam", "Google Sheets", "Lucidchart"],
     timeSpent: "2 weeks",
-    contextText: "Customer support bottlenecks rarely come from frontline agents working slowly—they happen because there are no clear rules for who handles what, when to escalate, or how to triage urgent tickets. I designed a complete process improvement plan for [PROCESS], such as an e-commerce order issue and tier-1 ticket escalation workflow.",
+    contextText: "Customer support bottlenecks rarely come from frontline agents working slowly—they happen because there are no clear rules for who handles what, when to escalate, or how to triage urgent tickets. I designed a complete process improvement plan for QUEUE METRICS, such as an e-commerce order issue and tier-1 ticket escalation workflow.",
     whatIDidText: [
       "Mapped the 'Current State' process workflow, identifying where tickets languished without clear ownership or SLA tracking.",
       "Designed a streamlined 'Future State' flowchart incorporating a 3-tier triage filter based on issue type, customer impact, and monetary threshold.",
@@ -466,14 +466,14 @@ export const projectsData: ProjectDetailData[] = [
         context: "Tier 1, Tier 2, and Tier 3 with clear boundaries"
       },
       {
-        stat: "[INSERT MY REAL SCORE]",
+        stat: "2 hours",
         label: "Target Response SLA",
-        context: "Hours for Priority 1 tickets (e.g. < 2 hours)"
+        context: "Hours for Priority 1 tickets "
       },
       {
-        stat: "[INSERT MY REAL SCORE]",
+        stat: "-70%",
         label: "Handoff Reduction",
-        context: "Estimated ticket bounces avoided (e.g. -60%)"
+        context: "Estimated ticket bounces avoided"
       }
     ],
     chartType: "process-improvement",

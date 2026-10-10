@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ profile }) => {
               Let's connect.
             </motion.h3>
             <p className="text-sm text-[#5A5A5A] dark:text-[#A09E9A] leading-relaxed max-w-md">
-              I'm actively seeking early-career opportunities in AI Training, AI Data Evaluation, Project & Customer Experience, Quality Review, and Operations. If you have an open role or feedback on my work, I'd love to hear from you.
+              I'm actively seeking career opportunities in AI Training, AI Data Evaluation, Project & Customer Experience, Quality Review, and Operations. If you have an open role or feedback on my work, I'd love to hear from you.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ profile }) => {
         {/* Bottom copyright & scroll to top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#6E6D6B] dark:text-[#9A9894]">
           <div>
-            © {new Date().getFullYear()} {profile.fullName}. Built with React & static deploy structure.
+            © {new Date().getFullYear()} {profile.fullName}.
           </div>
 
           <motion.button

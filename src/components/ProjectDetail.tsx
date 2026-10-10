@@ -310,7 +310,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
               Project Artifacts
             </span>
             <h2 className="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-[#1A1A1A] dark:text-white mt-1">
-              Image Gallery & Screenshots ({project.galleryImages.length} images)
+              Image Gallery & Screenshots
             </h2>
             <p className="text-xs text-[#6E6D6B] dark:text-[#9A9894] font-mono mt-1">
               Click any image to open the full-screen lightbox with captions and keyboard controls.
